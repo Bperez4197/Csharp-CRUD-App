@@ -37,7 +37,7 @@ namespace Final_Project_CIS262.Controllers
             return View(model);
         }
 
-        public ActionResult Add(int studentId)
+        public ActionResult Add(int studentId = 0)
         {
             ExamModel model = new ExamModel();
             model.StudentId = studentId;

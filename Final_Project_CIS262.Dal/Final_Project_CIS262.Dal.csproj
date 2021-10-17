@@ -63,6 +63,8 @@
     <Compile Include="Exam.cs" />
     <Compile Include="ExamAdapter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report.cs" />
+    <Compile Include="ReportAdapter.cs" />
     <Compile Include="Student.cs" />
     <Compile Include="StudentAdapter.cs" />
     <Compile Include="Teacher.cs" />

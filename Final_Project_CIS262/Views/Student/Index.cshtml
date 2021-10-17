@@ -1,0 +1,59 @@
+﻿@model Final_Project_CIS262.Models.AllStudentsModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>View Students</h2>
+<a href="/Student/Add">Add a Student</a>
+<table>
+    <tr>
+        <th>
+            Student Id
+        </th>
+        <th>
+            First Name
+        </th>
+        <th>
+            Last Name
+        </th>
+        <th>
+            View Exams
+        </th>
+        <th>
+            Add Exams
+        </th>
+        <th>
+            Edit Student
+        </th>
+        <th>
+            Delete Student
+        </th>
+    </tr>
+    @foreach (Final_Project_CIS262.Models.StudentModel student in Model.Students)
+    {
+        <tr>
+            <td>
+                @student.StudentId
+            </td>
+            <td>
+                @student.FirstName
+            </td>
+            <td>
+                @student.LastName
+            </td>
+            <td>
+                <a href="/Exam?StudentId=@student.StudentId">View</a>
+            </td>
+            <td>
+                <a href="/Exam/Add?StudentId=@student.StudentId">Add Exam</a>
+            </td>
+            <td>
+                <a href="/Student/Edit?StudentId=@student.StudentId">Edit</a>
+            </td>
+            <td>
+                <a href="/Student/Delete?StudentId=@student.StudentId">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

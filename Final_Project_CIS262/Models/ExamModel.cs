@@ -11,6 +11,8 @@ namespace Final_Project_CIS262.Models
     {
         public int ExamId { get; set; }
         public int StudentId { get; set; }
+        [Display(Name = "Score")]
+        [Required]
         public int Score { get; set; }
     }
 

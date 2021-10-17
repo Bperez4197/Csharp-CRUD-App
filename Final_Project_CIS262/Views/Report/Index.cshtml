@@ -1,0 +1,21 @@
+﻿@using Final_Project_CIS262.Models
+@model ReportModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Number of Exams</h2>
+<table>
+    <tr>
+        <th>Exams</th>
+    </tr>
+    @{int total = 0; }
+    @foreach (var row in Model.ReportRows)
+    {
+        total += row.Amount;
+    }
+    <tr>
+        <td>@total</td>
+    </tr>
+</table>
+

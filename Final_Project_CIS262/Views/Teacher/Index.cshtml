@@ -1,0 +1,47 @@
+﻿@model Final_Project_CIS262.Models.AllTeachersModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>View Teachers</h2>
+<a href="/Teacher/Add">Add a Teacher</a>
+<table>
+    <tr>
+        <th>
+            Teacher Id
+        </th>
+        <th>
+            First Name
+        </th>
+        <th>
+            Last Name
+        </th>
+        <th>
+            Edit Teacher
+        </th>
+        <th>
+            Delete Teacher
+        </th>
+    </tr>
+    @foreach (Final_Project_CIS262.Models.TeacherModel teacher in Model.Teachers)
+    {
+        <tr>
+            <td>
+                @teacher.TeacherId
+            </td>
+            <td>
+                @teacher.FirstName
+            </td>
+            <td>
+                @teacher.LastName
+            </td>
+            <td>
+                <a href="/Teacher/Edit?TeacherId=@teacher.TeacherId">Edit</a>
+            </td>
+            <td>
+                <a href="/Teacher/Delete?TeacherId=@teacher.TeacherId">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

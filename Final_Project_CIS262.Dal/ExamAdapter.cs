@@ -77,7 +77,7 @@ namespace Final_Project_CIS262.Dal
             using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
             {
                 SQLiteCommand command = connection.CreateCommand();
-                command.CommandText = "INSERT INTO Exam (ExamId, StudentId, Score) VALUES (" + exam.ExamId + ", " + exam.StudentId + ", " + exam.Score + ";";
+                command.CommandText = "INSERT INTO Exam (ExamId, StudentId, Score) VALUES ('" + exam.ExamId + "', '" + exam.StudentId + "', '" + exam.Score + "');";
                 connection.Open();
                 int rows = command.ExecuteNonQuery();
                 if (rows > 0)
